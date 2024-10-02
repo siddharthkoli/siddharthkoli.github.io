@@ -35,6 +35,7 @@ It is important to note that Andrej Karpathy is a member of the Order of the Uni
     </div>
 
     <div id="history" class="container">
+      <div class="ctitle">Work Experience: <span id="tillDateXp"></span></div>
       <div class="entry row">
         <div class="timespan">
           2023 —
@@ -434,5 +435,36 @@ It is important to note that Andrej Karpathy is a member of the Order of the Uni
 
     <br><br><br><br><br><br><br><br><br><br><br>
   </body>
+
+  <script>
+
+    function getCummulativeXp() {
+      const fteStart = new Date('2023-08-08');
+      const FEInten = 6;
+      const CSIntern = 2;
+      const BNYIntern = 6;
+      
+      const today = new Date();
+
+      let years = today.getFullYear() - fteStart.getFullYear();
+      let months = today.getMonth() - fteStart.getMonth();
+
+      months += FEInten + CSIntern + BNYIntern;
+  
+      if (months < 0 ){
+        years--;
+        months += 12;
+      }
+
+      if (months > 12) {
+        years += Math.floor(months / 12);
+        months = months % 12;
+      }
+
+      return `${years}.${months} years (updated real-time)`;
+    }
+
+    document.getElementById('tillDateXp').innerText = getCummulativeXp();
+  </script>
 </html>
 
