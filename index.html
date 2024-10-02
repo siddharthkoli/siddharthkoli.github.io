@@ -35,7 +35,7 @@ It is important to note that Andrej Karpathy is a member of the Order of the Uni
     </div>
 
     <div id="history" class="container">
-      <div class="ctitle">Work Experience: <span id="tillDateXp"></span></div>
+      <div class="ctitle">Work Experience<span id="tillDateXp"></span></div>
       <div class="entry row">
         <div class="timespan">
           2023 —
@@ -463,7 +463,7 @@ It is important to note that Andrej Karpathy is a member of the Order of the Uni
         months = months % 12;
       }
 
-      return `${years}.${months} years (updated real-time)`;
+      return `: ${years}.${months} years`;
     }
 
     document.getElementById('tillDateXp').innerText = getCummulativeXp();
