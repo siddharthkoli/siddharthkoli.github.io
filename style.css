@@ -263,3 +263,7 @@ hr {
     font-style: italic;
     margin-top: -15px;
 }
+.projectheadinganchor {
+    color: #c8c3bc;
+    text-decoration: none;
+}
